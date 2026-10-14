@@ -1,5 +1,7 @@
 # Asset sources
 
+- `telegram-avatar.jpg`: original public profile avatar from https://t.me/STT_SERVIS, downloaded from its `og:image` CDN link on 2026-10-14. Gear, tractor and golden-orange STT lettering are the source of the revised identity. Used unchanged, cropped to a circle by CSS.
+
 All photographic assets are downloaded from the existing https://stt-servis.ru/ public website. Their presence on that site does not establish that pictured people belong to the company or that pictured projects were executed by it.
 
 - `104.jpg`: https://stt-servis.ru/_sh/1/104.jpg — 2-tonne excavator product image, Kubota KX019, 1500×1000. Preferred hero.
