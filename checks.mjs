@@ -1,0 +1,15 @@
+import {readFileSync,existsSync,readdirSync,statSync} from 'node:fs';
+import assert from 'node:assert/strict';
+import vm from 'node:vm';
+import path from 'node:path';
+const js=readFileSync('dist/app.js','utf8');
+new vm.Script(js);
+for(const m of js.matchAll(/(?:image|second|photo):'([^']+)'/g))assert(existsSync('dist/assets/'+m[1]),'Missing image: '+m[1]);
+for(const m of readFileSync('dist/styles.css','utf8').matchAll(/url\(['"]?\/([^'"\)]+)['"]?\)/g))assert(existsSync('dist/'+m[1]),'Missing CSS asset: '+m[1]);
+const walk=(d)=>readdirSync(d).flatMap(n=>{const f=path.join(d,n);return statSync(f).isDirectory()?walk(f):[f]});
+const pages=walk('dist').filter(f=>path.basename(f)==='index.html');
+assert(pages.length===29,'Expected 29 addressable pages');
+assert(!js.includes('Тестовый объект'),'Test data must not be in source');
+assert(js.includes('data-copy-request'),'Request review flow missing');
+assert(js.includes('showModal()'),'Dialog interaction missing');
+console.log(JSON.stringify({syntax:'passed',assets:'passed',pages:pages.length,requestFlow:'present'}));

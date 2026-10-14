@@ -1,0 +1,8 @@
+pages/
+.openai/
+source-*.html
+source-fonts.css
+*.tar.gz
+node_modules/
+.DS_Store
+Thumbs.db
