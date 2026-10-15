@@ -56,3 +56,10 @@ Google Fonts API https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..9
 - `site-about.jpg`: https://90f1661d-2ff4-4f29-b07c-0e47453ca691.selstorage.ru/site826872/81750d75-755a-4025-b3dc-c426ba98cb44/81750d75-755a-4025-b3dc-c426ba98cb44-13264428.jpeg — generic tractor badge, unsuitable as company/team image.
 
 Font final filenames: `golos-cyrillic.woff2`, `golos-latin.woff2`, `oswald-cyrillic.woff2`, `oswald-latin.woff2`.
+# Страница товара: дополнительные исходники от 15.10.2026
+
+- `97.jpg`, `97_1.jpg`: реальные фотографии из карточки https://stt-servis.ru/shop/97/desc/arenda-mini-ehkskavatora-7-tonn, источники https://stt-servis.ru/_sh/00/97.jpg и https://stt-servis.ru/_sh/00/97_1.jpg.
+- `montserrat-variable.ttf`: Montserrat из официального репозитория Google Fonts, `ofl/montserrat/Montserrat[wght].ttf`. Лицензия SIL OFL приложена в `Montserrat-OFL.txt`.
+- Данные товара: заголовок, цена 3 000 ₽/ч и 24 000 ₽/8 ч, параметры машины — с указанной карточки на дату просмотра. Итоговая цена и доступность требуют подтверждения менеджером. Шесть абзацев переписаны для нового оформления, без отзывов и неподтверждённых результатов.
+- Структура шаблона uCoz: предоставленный владельцем файл «Код страницы.txt». Переменные и глобальные блоки используются в экспортируемых шаблонах; доступ к административной панели не использовался.
+

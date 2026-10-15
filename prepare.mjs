@@ -4,3 +4,4 @@ for(const route of routes){mkdirSync('dist/'+route,{recursive:true});copyFileSyn
 copyFileSync('dist/index.html','dist/404.html');
 writeFileSync('dist/robots.txt','User-agent: *\nAllow: /\n');
 console.log(`Prepared ${routes.length+1} pages`);
+await import('./prepare-variants.mjs');
