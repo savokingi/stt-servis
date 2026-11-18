@@ -1,0 +1,12 @@
+<!-- Вставить в <head> шаблона «Страница товара» вместо старого блока метаданных, OG и JSON-LD. -->
+<title><?if($META_TITLE$)?>$META_TITLE$<?else?>$ENTRY_TITLE$ | СТТ-Сервис<?endif?></title>
+<?if($META_DESCRIPTION$)?><meta name="description" content="$META_DESCRIPTION_RAW$"><?else?><meta name="description" content="$BRIEF$"><?endif?>
+<link rel="canonical" href="https://stt-servis.ru$REQUEST_URI$">
+<meta property="og:site_name" content="СТТ-Сервис">
+<meta property="og:title" content="$ENTRY_TITLE$">
+<meta property="og:description" content="$META_DESCRIPTION_RAW$">
+<meta property="og:url" content="https://stt-servis.ru$REQUEST_URI$">
+<meta property="og:image" content="https://stt-servis.ru$PHOTO$">
+<meta property="og:image:alt" content="$ENTRY_TITLE$">
+<?if($ENTRY_TYPE$=0)?><meta property="og:type" content="product"><meta property="product:price:amount" content="$PRICE_RAW$"><meta property="product:price:currency" content="RUB"><?else?><meta property="og:type" content="website"><?endif?>
+<!-- Не задавайте размеры OG-картинки и наличие вручную: используйте фактическое загруженное изображение и актуальное поле наличия. -->
